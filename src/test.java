@@ -1,10 +1,10 @@
 /**
- * 
+ *
  */
 
 /**
  * @author Guillaume
- * 
+ *
  */
 public class test {
 
@@ -14,7 +14,7 @@ public class test {
     public static void main(String[] args) {
         System.out.println("Hello World");
         System.out.println("Thanks Juju");
-        System.out.println("Fin test");
+        System.out.println("Fin");
     }
 
 }

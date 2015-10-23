@@ -10,19 +10,21 @@ public class Tp1ConvCelsiusFareiheit {
 		
 		char conversion = 'O';
 		Scanner sc = new Scanner(System.in);
-		int choixConversion;
+		char choixConversion;
 		double temperature;
 		double resultat;
 		
 		while (conversion ==  'O') {
 			//Demande type de conversion
-			choixConversion = 0;
-			while (choixConversion != 1 && choixConversion != 2) {
+			choixConversion = ' ';
+			while (choixConversion != '1' && choixConversion != '2') {
 				System.out.println("Choisissez le mode de conversion :");
 				System.out.println("1 - Convertisseur Celsius - Farenheit :");
 				System.out.println("2 - Convertisseur Farenheit - Celsius :");
-				choixConversion = sc.nextInt();
-				sc.nextLine();
+				choixConversion = sc.nextLine().charAt(0);
+				if (choixConversion != '1' && choixConversion != '2') {
+					System.out.println("Mode inconnu, veuillez réitérer votre choix.");
+				}
 			}
 
 			
@@ -30,15 +32,14 @@ public class Tp1ConvCelsiusFareiheit {
 			temperature = sc.nextDouble();
 			sc.nextLine();
 			
-			if (choixConversion == 1) {
+			if (choixConversion == '1') {
 				//Conversion Celsius - Farenheit
-				resultat =  ((9/5)*temperature) + 32;
-				System.out.println(temperature + " °C correspond à : " + resultat + " °F.");
+				resultat =  ((9.0/5.0)*temperature) + 32.0;
+				System.out.println(temperature + " °C correspond à : " + arrondi(resultat, 2) + " °F.");
 			} else {
 				//Conversion Farenheit - Celsius
 				resultat = ((temperature -32)*5)/9;
-				resultat = arrondi(resultat, 2);
-				System.out.println(temperature + " °F correspond à : " + resultat + " °C.");
+				System.out.println(temperature + " °F correspond à : " + arrondi(resultat, 2) + " °C.");
 			}		
 					
 			conversion = ' ';

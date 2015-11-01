@@ -72,8 +72,36 @@ public class MethodesDeClasse {
 		double d = 2;
 		double exp = Math.pow(d, 2); // La fonction exposant
 		System.out.println("d au carré sachant que d = " + d + " alors le résultat est : " + exp);
+		// Déclaration tableau
+		String [] tab = {"toto", "tata", "titi", "tete"};
+		String [] tab2 = {"guillaume", "marie", "paul", "madeleine" };
+		int [] tabInt = {1, 2, 3, 4 };
+		String tabMulti2[][] = {{"toto", "titi", "tutu", "tete", "tata"}, {"1", "2", "3", "4"}};
 		
+		// La méthode avec un tableau de String sera invoquée
+		System.out.println();
+		System.out.println("Contenu du tableau tab");
+		parcourirTableau(tab);
+		System.out.println();
 		
+		// La méthode avec un tableau de String sera invoquée
+		System.out.println("Contenu du tableau tab2");
+		parcourirTableau(tab2);
+		System.out.println();
+		
+		// La méthode toString sera invoquée avec un tableau de String
+		System.out.println("Appel toString avec le tableau tab2");
+		System.out.println(toString(tab2));
+		System.out.println();	
+		
+		// La méthode avec un tableau d'int sera invoquée
+		System.out.println("Contenu du tableau tabInt");
+		parcourirTableau(tabInt);
+		System.out.println();		
+
+		// La méthode avec un tableau de string à 2 dimensions sera invoquée
+		System.out.println("Contenu du tableau tabMulti2");
+		parcourirTableau(tabMulti2);
 		
 	}
 	
@@ -89,4 +117,35 @@ public class MethodesDeClasse {
 		return (double) ( (int) (A * Math.pow(10, B) + .5)) / Math.pow(10, B);
 	}
 
+	
+	static void parcourirTableau(String[] tabBis){
+		for (String str : tabBis) {
+			System.out.println(str);
+		}
+	}
+	
+	static void parcourirTableau(int[] tabBis){
+		for (int str : tabBis) {
+			System.out.println(str);
+		}
+	}
+	
+	static void parcourirTableau(String[][] tab){
+		for (String tab2[] : tab) {
+			for (String str : tab2) {
+				System.out.println(str);
+			}
+		}
+	}	
+		
+	static String toString (String[] tab){
+		System.out.println("Méthode toString() ! \n--------");
+		String retour = "";
+		for (String str : tab) {
+			retour += str + "\n";
+		}
+		return retour;
+	}
+	
+	
 }

@@ -9,7 +9,8 @@ public class ManipulationTableau {
         // Notre objet Scanner
         Scanner sc = new Scanner(System.in);
         // Autres variables
-        int i = 0, emplacement = 0;
+        int i = 0; 
+        //int emplacement = 0;
         char reponse = ' ', carac = ' ';
 
         // -----------------------------

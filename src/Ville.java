@@ -1,12 +1,19 @@
 public class Ville {
 
-    private String nomVille;
-    private String nomPays;
-    private int nbreHabitants;
-    private char categorie;
+    // Variables publiques qui comptent les instances
+    public static int nbreInstances = 0;
+    // Variable privée qui comptera aussi les instances
+    protected static int nbreInstancesBis = 0;
+    protected String nomVille;
+    protected String nomPays;
+    protected int nbreHabitants;
+    protected char categorie;
 
     public Ville() {
         System.out.println("Création d'une ville !");
+        // On incrémente nos variables à chaque appel aux constructeurs
+        nbreInstances++;
+        nbreInstancesBis++;
         nomVille = "Inconnu";
         nomPays = "Inconnu";
         nbreHabitants = 0;
@@ -15,6 +22,9 @@ public class Ville {
 
     public Ville(String pNom, int pNbre, String pPays) {
         System.out.println("Création d'une ville avec des paramètres !");
+        // On incrémente nos variables à chaque appel aux constructeurs
+        nbreInstances++;
+        nbreInstancesBis++;
         nomVille = pNom;
         nomPays = pPays;
         nbreHabitants = pNbre;
@@ -40,6 +50,10 @@ public class Ville {
     // Retourne la catégorie de la ville
     public char getCategorie() {
         return categorie;
+    }
+
+    public static int getNbreInstancesBis() {
+        return nbreInstancesBis;
     }
 
     // ************** MUTATEURS **************
@@ -74,6 +88,12 @@ public class Ville {
     }
 
     // ************** METHODE **************
+    @Override
+    public String toString() {
+        return "\t" + this.nomVille + " est une ville de " + this.nomPays + ", elle comporte : " + this.nbreHabitants
+                + " habitant(s) => elle est donc de catégorie : " + this.categorie;
+    }
+
     // Retourne la description de la ville
     public String decrisToi() {
         return "\t" + this.nomVille + " est une ville de " + this.nomPays + ", elle comporte : " + this.nbreHabitants

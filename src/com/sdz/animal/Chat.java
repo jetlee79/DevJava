@@ -1,3 +1,4 @@
+package com.sdz.animal;
 public class Chat extends Felin {
 
     public Chat() {

@@ -1,3 +1,4 @@
+package com.sdz.animal;
 public class Tigre extends Felin {
 
     public Tigre() {

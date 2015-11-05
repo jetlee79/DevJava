@@ -1,3 +1,4 @@
+package com.sdz.ville;
 public class Ville {
 
     // Variables publiques qui comptent les instances

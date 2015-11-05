@@ -1,3 +1,4 @@
+package com.sdz.animal;
 public abstract class Canin extends Animal {
 
     @Override

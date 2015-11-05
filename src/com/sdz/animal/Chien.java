@@ -1,3 +1,4 @@
+package com.sdz.animal;
 public class Chien extends Canin implements Rintintin {
 
     public Chien() {
@@ -16,19 +17,19 @@ public class Chien extends Canin implements Rintintin {
 
     @Override
     public void faireCalin() {
-        // TODO Auto-generated method stub
+        System.out.println("Je te fais un GROS CÂLIN");
 
     }
 
     @Override
     public void faireLechouille() {
-        // TODO Auto-generated method stub
+        System.out.println("Je fais de grosses léchouilles...");
 
     }
 
     @Override
     public void faireLeBeau() {
-        // TODO Auto-generated method stub
+        System.out.println("Je fais le beau !");
 
     }
 

@@ -1,3 +1,5 @@
+package com.sdz.ville;
+
 public class Capitale extends Ville {
     private String monument;
 

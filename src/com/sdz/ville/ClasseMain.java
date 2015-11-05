@@ -1,3 +1,5 @@
+package com.sdz.ville;
+
 public class ClasseMain {
 
     public static void main(String[] args) {

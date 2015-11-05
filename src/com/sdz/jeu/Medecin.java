@@ -1,3 +1,4 @@
+package com.sdz.jeu;
 public class Medecin extends Personnage {
 
     @Override

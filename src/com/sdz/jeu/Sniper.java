@@ -1,3 +1,6 @@
+package com.sdz.jeu;
+
+
 public class Sniper extends Personnage {
 
     @Override
@@ -10,3 +13,5 @@ public class Sniper extends Personnage {
     }
 
 }
+
+

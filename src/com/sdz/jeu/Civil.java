@@ -1,3 +1,4 @@
+package com.sdz.jeu;
 public class Civil extends Personnage {
     @Override
     public void combattre() {

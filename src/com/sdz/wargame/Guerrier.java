@@ -1,3 +1,4 @@
+package com.sdz.wargame;
 import com.sdz.comportement.CombatPistolet;
 import com.sdz.comportement.Deplacement;
 import com.sdz.comportement.EspritCombatif;

@@ -1,3 +1,4 @@
+package com.sdz.wargame;
 import com.sdz.comportement.*;
  
 public abstract class Personnage {

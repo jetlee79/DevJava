@@ -8,6 +8,11 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+/**
+ * Classe qui compare le temps de lecture et ecriture entre un objet
+ * FileInputStream contre BufferedInputStream et FileOutputStream contre un
+ * BufferedOutputStream. Le but est de montrer que le Buffer est plus performant
+ */
 public class MainFileInputStreamVsBufferWrite {
 
     public static void main(String[] args) {
@@ -60,8 +65,14 @@ public class MainFileInputStreamVsBufferWrite {
                 if (fis != null) {
                     fis.close();
                 }
+                if (fos != null) {
+                    fos.close();
+                }
                 if (bis != null) {
                     bis.close();
+                }
+                if (bos != null) {
+                    bos.close();
                 }
             } catch (IOException e) {
                 e.printStackTrace();

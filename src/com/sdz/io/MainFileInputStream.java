@@ -6,6 +6,11 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+/**
+ * Classe qui lis le contenu d'un fichier et le copier dans un autre.
+ * Utilisation des objets FileInputStream et FileOutputStream
+ *
+ */
 public class MainFileInputStream {
 
     public static void main(String[] args) {
@@ -42,8 +47,9 @@ public class MainFileInputStream {
                 // au format byte et au format char
                 for (byte bit : buf) {
                     System.out.print("\t" + bit + "(" + (char) bit + ")");
-                    System.out.println();
+
                 }
+                System.out.println();
             }
 
             System.out.println("Copie terminée !");

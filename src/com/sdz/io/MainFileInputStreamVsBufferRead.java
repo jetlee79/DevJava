@@ -6,6 +6,10 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+/**
+ * Classe qui compare le temps de lecture entre un objet FileInputStream et un
+ * BufferedInputStream. Le but est de montrer que le Buffer est plus performant
+ */
 public class MainFileInputStreamVsBufferRead {
 
     public static void main(String[] args) {

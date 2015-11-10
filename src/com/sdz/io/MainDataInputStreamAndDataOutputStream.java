@@ -10,6 +10,12 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+/**
+ * Classe qui créé un fichier et le lis via l'utilisation des objets
+ * DataInputStream et DataOutputStream
+ *
+ *
+ */
 public class MainDataInputStreamAndDataOutputStream {
 
     public static void main(String[] args) {
@@ -40,6 +46,7 @@ public class MainDataInputStreamAndDataOutputStream {
             System.out.println(dis.readInt());
             System.out.println(dis.readLong());
             System.out.println(dis.readShort());
+            dis.close();
 
         } catch (FileNotFoundException e) {
             // Cette exception est levée
@@ -50,6 +57,5 @@ public class MainDataInputStreamAndDataOutputStream {
             // d'écriture ou de lecture
             e.printStackTrace();
         }
-
     }
 }

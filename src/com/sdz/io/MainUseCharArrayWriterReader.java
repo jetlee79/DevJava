@@ -8,7 +8,7 @@ public class MainUseCharArrayWriterReader {
 
     public static void main(String[] args) {
         CharArrayWriter caw = new CharArrayWriter();
-        CharArrayReader car;
+        CharArrayReader car = null;
 
         try {
             caw.write("Coucou les Zéros");
@@ -34,6 +34,13 @@ public class MainUseCharArrayWriterReader {
 
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            if (caw != null) {
+                caw.close();
+            }
+            if (car != null) {
+                car.close();
+            }
         }
 
     }

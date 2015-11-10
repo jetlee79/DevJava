@@ -8,7 +8,7 @@ public class MainUseStringWriterReader {
 
     public static void main(String[] args) {
         StringWriter sw = new StringWriter();
-        StringReader sr;
+        StringReader sr = null;
 
         try {
             sw.write("Coucou les Zéros");
@@ -34,6 +34,18 @@ public class MainUseStringWriterReader {
 
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                if (sw != null) {
+                    sw.close();
+                }
+                if (sr != null) {
+                    sr.close();
+                }
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
 
     }

@@ -10,8 +10,8 @@ public class MainFileWriter {
 
     public static void main(String[] args) {
         File file = new File("testFileWriter.txt");
-        FileWriter fw;
-        FileReader fr;
+        FileWriter fw = null;
+        FileReader fr = null;
 
         try {
             // Création de l'objet
@@ -42,6 +42,17 @@ public class MainFileWriter {
             // Celle-ci se produit lors d'une erreur
             // d'écriture ou de lecture
             e.printStackTrace();
+        } finally {
+            try {
+                if (fw != null) {
+                    fw.close();
+                }
+                if (fr != null) {
+                    fr.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
 
     }

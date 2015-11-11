@@ -1,6 +1,4 @@
-import com.sdz.exception.NomVilleException;
-import com.sdz.exception.NombreHabitantException;
-import com.sdz.exception.Ville;
+package com.sdz.exception;
 
 public class TestException01 {
 

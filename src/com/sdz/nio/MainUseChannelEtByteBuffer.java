@@ -8,7 +8,15 @@ import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 
-public class Main {
+
+/**
+ * Classe qui compare le temps de lecture  entre un buffer conventionnel 
+ * BufferedInputStream et la nouvelle façon de faire ave cles channel FileChannel 
+ * Le but est de montrer que le nouveau canal (getChannel d'un FileInputStream ) 
+ * combiné à un Buffer (ByteBuffer) dans le package nio est plus performant.
+ *
+ */
+public class MainUseChannelEtByteBuffer {
 
     public static void main(String[] args) {
         FileInputStream fis = null;

@@ -49,7 +49,7 @@ public class ClasseMain {
                 tableau[i] = C;
             }
         }
-
+        
         // Il ne nous reste plus qu'à décrire tout notre tableau !
         for (Ville v3 : tableau) {
             System.out.println(v3.decrisToi() + "\n");

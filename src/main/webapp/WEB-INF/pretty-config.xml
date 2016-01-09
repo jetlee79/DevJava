@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pretty-config xmlns="http://ocpsoft.com/prettyfaces/3.3.2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://ocpsoft.com/prettyfaces/3.3.2
+                                   		http://ocpsoft.com/xml/ns/prettyfaces/ocpsoft-pretty-faces-3.3.2.xsd">
+
+	<url-mapping id="home">
+		<pattern value="/home" />
+		<view-id value="/home.jsf" />
+	</url-mapping>
+	
+	<url-mapping id="fibonacci">
+		<pattern value="/fibo" />
+		<query-param name="r">#{fiboBean.rang}</query-param>
+		<view-id value="/math/fibonacci.jsf" />
+		<action>#{fiboBean.calculer}</action>
+	</url-mapping>
+	
+	<url-mapping id="fibonacci2">
+		<pattern value="/fibo/#{fiboBean.rang}" />
+		<view-id value="/math/fibonacci.jsf" />
+		<action>#{fiboBean.calculer}</action>
+	</url-mapping>
+	
+	<url-mapping id="factoriel">
+		<pattern value="/fact" />
+		<view-id value="/math/factoriel.jsf" />
+	</url-mapping>
+
+</pretty-config>
